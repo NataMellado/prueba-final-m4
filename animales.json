@@ -2,7 +2,7 @@
   "animales": [
     {
       "especie": "Leon",
-      "imagen": "Leon.jpg",
+      "imagen": "Leon.png",
       "sonido":"Rugido.mp3"
     },
     {
@@ -22,7 +22,7 @@
     },
     {
       "especie": "Aguila",
-      "imagen": "Aguila.jpg",
+      "imagen": "Aguila.png",
       "sonido":"Chillido.mp3"
     }
    

@@ -34,8 +34,8 @@
             <!-- Input especie animal--->
             <div class="form-group">
               <label for="especie-animal">Especie del animal:</label>
-              <select class="form-control bg-dark text-white" id="especie-animal">
-                <option disabled selected>Seleccione un animal</option>
+              <select class="form-control bg-dark text-white" id="especie-animal" required>
+                <option value ="" disabled selected>Seleccione un animal</option>
                 <option value="Leon">León</option>
                 <option value="Lobo">Lobo</option>
                 <option value="Oso">Oso</option>
@@ -47,14 +47,14 @@
             <!-- Input nombre -->
             <div class="form-group">
               <label for="nombre">Nombre del animal:</label>
-              <input type="text" class="form-control bg-dark text-white" id="nombre"/>
+              <input type="text" class="form-control bg-dark text-white" id="nombre" required/>
             </div>
 
             <!-- Input age--->
             <div class="form-group">
-              <label for="exampleInputPassword1">Años de edad estimados:</label>
-              <select class="form-control bg-dark text-white" id="edad">
-                <option disabled selected>Seleccione un rango de años</option>
+              <label for="edad-animal">Años de edad estimados:</label>
+              <select class="form-control bg-dark text-white" id="edad" required>
+                <option value="" disabled selected>Seleccione un rango de años</option>
                 <option value="0 - 1 años">0 - 1 años</option>
                 <option value="1 - 3 años">1 - 3 años</option>
                 <option value="3 - 5 años">3 - 5 años</option>
@@ -71,6 +71,7 @@
                 rows="5"
                 class="form-control shadow-lg bg-dark text-white"
                 id="comentarios"
+                required
               ></textarea>
             </div>
 
@@ -82,17 +83,16 @@
           </div>
 
           <!-- Button -->
-          <button class="btn btn-light d-block" id="btnRegistrar" type="button">Agregar</button>
+          <button class="btn btn-light d-block" id="btnRegistrar" type="submit">Agregar</button>
 
         </div>
       </form>
-
     </main>
 
 
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal">
+    <div class="modal fade" id="modal-container">
       <div class="modal-dialog modal-dialog-centered w-25" role="document">
         <div class="modal-content bg-dark">
           <div class="modal-body">...</div>
@@ -104,6 +104,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script type="module" src="assets/js/main.js"></script>
+    <script type="module" src="assets/js/index.js"></script>
   </body>
 </html>
