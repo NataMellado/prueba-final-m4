@@ -1,35 +1,36 @@
 const especieSelect = document.getElementById('especie-animal');
+let datosAnimales;
 
-// Función para cargar los animales del archivo JSON
-async function cargarDatos() {
+// Función autoejecutable (IIFE) para cargar los datos del archivo JSON
+(async () => {
     try {
-        const  response = await fetch('animales.json');
+        const response = await fetch('animales.json');
         const data = await response.json();
-        return data.animales;
-
+        datosAnimales = data.animales;
     } catch (error) {
         console.error('Error al cargar los datos del archivo JSON', error);
     }
-}
+})();
 
-// Función para obtener el animal de cargarDatos() según la especie seleccionada por el usuario
-async function rutaAnimal() {    
-    const animales = await cargarDatos();
+// Función para obtener el animal de los datos cargados según la especie seleccionada por el usuario
+async function animalData() {
+    while (!datosAnimales) {
+        await new Promise(resolve => setTimeout(resolve, 100)); 
+    }
     const especie = especieSelect.value;
-    return animales.find(animal => animal.especie === especie);
+    return datosAnimales.find(animal => animal.especie === especie);
 }
 
-// Función para obtener la ruta de la imagen desde cargarDatos()
+// Función para obtener la ruta de la imagen desde los datos cargados
 async function rutaImagen() {
-    const animal = await rutaAnimal();
+    const animal = await animalData();
     return `./assets/imgs/${animal.imagen}`;
 }
 
-// Funcion para obtener la ruta del sonido desde cargarDatos()
+// Función para obtener la ruta del sonido desde los datos cargados
 async function rutaSonido() {
-    const animal = await rutaAnimal();
+    const animal = await animalData();
     return `./assets/sounds/${animal.sonido}`;
-}   
+}
 
-export default {rutaImagen, rutaSonido};
-
+export default { rutaImagen, rutaSonido };
