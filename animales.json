@@ -1,28 +1,28 @@
 {
   "animales": [
     {
-      "name": "Leon",
-      "imagen": "Leon.png",
+      "especie": "Leon",
+      "imagen": "Leon.jpg",
       "sonido":"Rugido.mp3"
     },
     {
-      "name": "Lobo",
+      "especie": "Lobo",
       "imagen": "Lobo.jpg",
       "sonido":"Aullido.mp3"
     },
     {
-      "name": "Oso",
+      "especie": "Oso",
       "imagen": "Oso.jpg",
-      "sonido":"Gruñido.mp3"
+      "sonido":"Grunido.mp3"
     },
     {
-      "name": "Serpiente",
+      "especie": "Serpiente",
       "imagen": "Serpiente.jpg",
       "sonido":"Siseo.mp3"
     },
     {
-      "name": "Aguila",
-      "imagen": "Aguila.png",
+      "especie": "Aguila",
+      "imagen": "Aguila.jpg",
       "sonido":"Chillido.mp3"
     }
    
