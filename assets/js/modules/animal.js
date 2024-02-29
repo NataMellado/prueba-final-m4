@@ -40,9 +40,16 @@ class Animal {
         name.classList.add('card-title');
         name.textContent = this.getName();
 
-        const sound = document.createElement('audio');
-        sound.src = this.getSound();
-        sound.setAttribute('controls', '');
+        const sound = document.createElement('div');
+        sound.classList.add('custom-audio');
+        sound.addEventListener('click', () => {
+            this.playSound();
+        });
+
+        const audioIcon = document.createElement('i');
+        audioIcon.classList.add('fa-solid', 'fa-circle-play');
+
+        sound.appendChild(audioIcon);
 
         card.setAttribute('data-age', this.getAge());
         card.setAttribute('data-comment', this.getComment());
@@ -52,6 +59,11 @@ class Animal {
         card.appendChild(sound);
 
         return card;
+    }
+
+    playSound() {
+        const audio = new Audio(this.getSound());
+        audio.play();
     }
 
 }

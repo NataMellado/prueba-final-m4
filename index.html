@@ -7,27 +7,18 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="assets/css/estilos.css" />
+ 
   </head>
 
   <body>
 
     <!-- Main -->
-    <main class="row">
-
-      <!-- Animals container --> 
-      <section id="animalsContainer" class="col-12 card col-sm-7 text-center p-4 bg-warning shadow-lg">
-        <h3>Animales en investigación</h3>
-        <hr class="my-0 bg-dark w-75 mx-auto" />
-        <div id="Animales" class="my-3 p-3 d-flex align-items-start justify-content-start flex-wrap bg-dark"></div>
-      </section>
+    <main>
 
       <!-- Register form -->
-      <form id="animal-form" class="card col-12 col-sm-4 bg-warning text-dark offset-1 shadow-lg">
+      <form id="animal-form" class="card bg-warning text-dark">
         <div class="card-body">
-          <h5 class="card-title">Registrar animal en:</h5>
-          <h6 class="card-subtitle mb-2 text-muted">
-            Ingrese los datos del animal
-          </h6>
+          <h5 class="card-title">Registrar animal:</h5>
           <hr />
           <div class="card-text my-3">
 
@@ -66,9 +57,9 @@
 
             <!-- Input comments--->
             <div class="form-group">
-              <label for="comentarios">Comentarios:</label>
+              <label for="comentarios">Observaciones:</label>
               <textarea
-                rows="5"
+                rows="1"
                 class="form-control shadow-lg bg-dark text-white"
                 id="comentarios"
                 required
@@ -76,7 +67,7 @@
             </div>
 
             <!-- Preview -->
-            <div class="p-5 card bg-dark">
+            <div class="preview-container p-3 card bg-dark">
               <img id="preview" alt="Imagen de la especie" class="img-fluid" src="./assets/imgs/lion.svg" ></img>
             </div>
 
@@ -87,6 +78,13 @@
 
         </div>
       </form>
+
+      <!-- Animals container --> 
+      <section id="animalsContainer" class="card text-center bg-warning p-4">
+        <h3>Animales en investigación</h3>
+        <div id="Animales" class="bg-dark"></div>
+      </section>
+
     </main>
 
 
@@ -101,6 +99,7 @@
     </div>
 
     <!-- Scripts -->
+    <script src="https://kit.fontawesome.com/d85944cffc.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

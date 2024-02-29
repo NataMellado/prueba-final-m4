@@ -60,8 +60,9 @@ function actualizarModal(imagen, edad, comentario) {
 
     modalBody.innerHTML = `
         <img src="${imagen}" class="img-fluid" alt="Animal">
-        <p>Edad: ${edad}</p>
-        <p>Comentario: ${comentario}</p>
+        <p class="edad">Edad: ${edad}</p>
+        <hr>
+        <p class="comentario">Observaciones: ${comentario}</p>
     `;
     $('#modal-container').modal('show');
 }
